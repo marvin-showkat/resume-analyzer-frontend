@@ -133,14 +133,11 @@ export default function Home() {
 
               <button
                 onClick={async () => {
-                  const response = await fetch(
-                    "http://your-backend-name.onrender.com/download-report",
-                    {
-                      method: "POST",
-                      headers: { "Content-Type": "application/json" },
-                      body: JSON.stringify(result),
-                    },
-                  );
+                  const response = await fetch(`${API_BASE}/download-report`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(result),
+                  });
 
                   const blob = await response.blob();
                   const url = window.URL.createObjectURL(blob);
