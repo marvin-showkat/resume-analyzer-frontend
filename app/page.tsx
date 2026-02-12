@@ -13,7 +13,7 @@ type AnalysisResult = {
 
 const API_BASE =
   process.env.NEXT_PUBLIC_API_URL ||
-  "http://resume-analyzer-backend.onrender.com";
+  "https://resume-analyzer-backend-h3xc.onrender.com";
 
 export default function Home() {
   const [resumeText, setResumeText] = useState("");
